@@ -35,16 +35,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          rm -rf .deploy
-          mkdir .deploy
-          cp -R dist/* .deploy/
-          if [ -f dist/.nojekyll ]; then cp dist/.nojekyll .deploy/; fi
+          DEPLOY_DIR="${RUNNER_TEMP}/gh-pages-deploy"
+          rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
+          cp -R dist/. "$DEPLOY_DIR/"
 
           git checkout --orphan gh-pages
           git reset --hard
           git clean -fdx
-          cp -R .deploy/* .
-          rm -rf .deploy
+          cp -R "$DEPLOY_DIR"/. .
           touch .nojekyll
 
           git add -A
