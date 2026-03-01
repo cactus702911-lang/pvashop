@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Senior WordPress Developer CV</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--bg-light);
+        }
+        .cv-container {
+            background: white;
+            padding: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+        }
+        .role {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .company {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #475569;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-category {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+        .skill-list {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        .download-btn {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 30px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            transition: transform 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:window.print()" class="download-btn no-print">Download PDF / Print</a>
+
+    <div class="cv-container">
+        <header>
+            <div>
+                <h1>Alex Morgan</h1>
+                <div class="role">Senior WordPress Developer & Web Architect</div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:hello@wpexpert.com">hello@wpexpert.com</a>
+                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                <a href="#">linkedin.com/in/alexmorgan</a>
+                <a href="#">github.com/alexmorgan</a>
+                <div>Dhaka, Bangladesh</div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Results-driven Senior WordPress Developer with over 7 years of experience in designing and developing high-performance, scalable web solutions. 
+                Expert in custom theme and plugin development, WooCommerce customization, and performance optimization. 
+                Proven track record of delivering 150+ successful projects for clients worldwide, consistently achieving 95+ PageSpeed scores and improving conversion rates.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category">Core Technologies</div>
+                    <div class="skill-list">PHP 8+, JavaScript (ES6+), HTML5, CSS3/Sass</div>
+                </div>
+                <div>
+                    <div class="skill-category">WordPress</div>
+                    <div class="skill-list">Custom Themes, Plugin Dev, WooCommerce, Gutenberg Blocks, ACF Pro</div>
+                </div>
+                <div>
+                    <div class="skill-category">Frontend Frameworks</div>
+                    <div class="skill-list">React.js, Tailwind CSS, jQuery, Vue.js</div>
+                </div>
+                <div>
+                    <div class="skill-category">Tools & DevOps</div>
+                    <div class="skill-list">Git, Webpack/Vite, Composer, Docker, CI/CD</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="company">WebCraft Solutions</div>
+                    <div class="date">2021 - Present</div>
+                </div>
+                <div class="position">Senior WordPress Developer</div>
+                <ul>
+                    <li>Lead developer for enterprise-level WordPress projects, managing a team of 4 junior developers.</li>
+                    <li>Architected a custom headless WordPress solution using Next.js, reducing page load times by 60%.</li>
+                    <li>Developed proprietary plugins for client booking systems, serving 10,000+ monthly users.</li>
+                    <li>Implemented automated testing pipelines, reducing post-deployment bugs by 40%.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="company">Digital Studio Agency</div>
+                    <div class="date">2019 - 2021</div>
+                </div>
+                <div class="position">Full Stack Developer</div>
+                <ul>
+                    <li>Built 30+ custom WooCommerce themes tailored to client branding and conversion goals.</li>
+                    <li>Integrated complex third-party APIs (Stripe, Salesforce, HubSpot) into WordPress environments.</li>
+                    <li>Optimized legacy client sites, improving Core Web Vitals scores from 'Poor' to 'Good'.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="company">Freelance / Self-Employed</div>
+                    <div class="date">2017 - 2019</div>
+                </div>
+                <div class="position">WordPress Developer</div>
+                <ul>
+                    <li>Collaborated directly with small business owners to establish their digital presence.</li>
+                    <li>Delivered end-to-end web solutions including design, development, SEO, and hosting setup.</li>
+                    <li>Maintained 98% client satisfaction rate with long-term support contracts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="company">University of Dhaka</div>
+                    <div class="date">2013 - 2017</div>
+                </div>
+                <div class="position">B.Sc. in Computer Science & Engineering</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified Meta Frontend Developer</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Google Analytics Individual Qualification</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
