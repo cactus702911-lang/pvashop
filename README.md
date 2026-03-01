@@ -1,69 +1,57 @@
-# Pva Shop
+# React + TypeScript + Vite
 
-A fully functional e-commerce website built with React, TypeScript, and Vite.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Responsive Design**: Works on all devices.
-- **Modern UI**: Built with Tailwind CSS.
-- **Routing**: Client-side routing with `react-router-dom`.
-- **State Management**: Using Zustand.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Tech Stack
+## Expanding the ESLint configuration
 
-- **Framework**: React + Vite
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Deployment**: GitHub Pages, Vercel
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/cactus702911-lang/pvashop.git
-   cd pvashop
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-## Deployment
-
-### GitHub Pages
-
-To deploy to GitHub Pages:
-
-```bash
-npm run deploy
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-This will build the project and push the `dist` folder to the `gh-pages` branch.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### Vercel
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-The project is configured for Vercel deployment. Connect your GitHub repository to Vercel, and it will automatically detect the Vite settings.
-
-Ensure the "Output Directory" is set to `dist` (default for Vite).
-
-## Project Structure
-
-- `src/`: Source code
-  - `components/`: Reusable components
-  - `pages/`: Page components
-  - `styles/`: Global styles
-- `public/`: Static assets
-- `vite.config.ts`: Vite configuration
+export default tseslint.config({
+  extends: [
+    // other configs...
+    // Enable lint rules for React
+    reactX.configs['recommended-typescript'],
+    // Enable lint rules for React DOM
+    reactDom.configs.recommended,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
